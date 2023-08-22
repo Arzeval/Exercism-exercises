@@ -1,15 +1,11 @@
-// @ts-check
-//
-// The line above enables type checking for this file. Various IDEs interpret
-// the @ts-check directive. It will give you helpful autocompletion when
-// implementing this exercise.
+
 /**
  * Determines whether or not you need a licence to operate a certain kind of vehicle.
  *
  * @param {string} kind
  * @returns {boolean} whether a license is required
  */
-export function needsLicense(kind) {
+ function needsLicense(kind) {
   return kind === 'car' || kind === 'truck'
  }
  /**
@@ -20,7 +16,7 @@ export function needsLicense(kind) {
   * @param {string} option2
   * @returns {string} a sentence of advice which option to choose
   */
- export function chooseVehicle(option1, option2) {
+  function chooseVehicle(option1, option2) {
    if (option1[0] < option2[0] ) {
      return option1 + ' is clearly the better choice.'
    } else {
@@ -34,7 +30,7 @@ export function needsLicense(kind) {
   * @param {number} originalPrice
   * @param {number} age
   */
- export function calculateResellPrice(originalPrice, age) {
+  function calculateResellPrice(originalPrice, age) {
    if (age < 3) {
      let descuento = (originalPrice * 20) / 100
      return originalPrice - descuento

@@ -1,4 +1,4 @@
-// @ts-check
+
 /**
  * Retrieve card from cards array at the 0-based position
  *
@@ -7,7 +7,7 @@
  *
  * @returns {number} the card
  */
-export function getItem(cards, position) {
+ function getItem(cards, position) {
     return cards[position]
    }
    /**
@@ -19,7 +19,7 @@ export function getItem(cards, position) {
     *
     * @returns {number[]} the cards with the change applied
     */
-   export function setItem(cards, position, replacementCard) {
+    function setItem(cards, position, replacementCard) {
      const card = cards
      card.splice(position, 1, replacementCard)
      return card
@@ -32,7 +32,7 @@ export function getItem(cards, position) {
     *
     * @returns {number[]} the cards with the newCard applied
     */
-   export function insertItemAtTop(cards, newCard) {
+    function insertItemAtTop(cards, newCard) {
      cards.push(newCard)
      return cards
    }
@@ -44,7 +44,7 @@ export function getItem(cards, position) {
     *
     * @returns {number[]} the cards without the removed card
     */
-   export function removeItem(cards, position) {
+    function removeItem(cards, position) {
      cards.splice(position, 1)
      return cards
    }
@@ -55,7 +55,7 @@ export function getItem(cards, position) {
     *
     * @returns {number[]} the cards without the removed card
     */
-   export function removeItemFromTop(cards) {
+    function removeItemFromTop(cards) {
      cards.pop()
      return cards
    }
@@ -67,7 +67,7 @@ export function getItem(cards, position) {
     *
     * @returns {number[]} the cards including the new card
     */
-   export function insertItemAtBottom(cards, newCard) {
+    function insertItemAtBottom(cards, newCard) {
      cards.unshift(newCard)
      return cards
    }
@@ -78,7 +78,7 @@ export function getItem(cards, position) {
     *
     * @returns {number[]} the cards without the removed card
     */
-   export function removeItemAtBottom(cards) {
+    function removeItemAtBottom(cards) {
      cards.shift()
      return cards
    }
@@ -90,6 +90,6 @@ export function getItem(cards, position) {
     *
     * @returns {boolean} true if there are exactly stackSize number of cards, false otherwise
     */
-   export function checkSizeOfStack(cards, stackSize) {
+    function checkSizeOfStack(cards, stackSize) {
     return cards.length === stackSize ? true : false
    }
