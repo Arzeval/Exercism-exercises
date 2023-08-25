@@ -7,7 +7,7 @@
  *
  * @returns {string} template string combining both parameters
  */
-export function buildSign(occasion, name) {
+ function buildSign(occasion, name) {
     return `Happy ${occasion} ${name}!`
   }
   /**
@@ -17,7 +17,7 @@ export function buildSign(occasion, name) {
    *
    * @returns {string} template string based on age
    */
-  export function buildBirthdaySign(age) {
+   function buildBirthdaySign(age) {
     if (age >= 50) {
       return "Happy Birthday! What a mature fellow you are."
     } else {
@@ -32,7 +32,7 @@ export function buildSign(occasion, name) {
    *
    * @returns {string} multi-line template string
    */
-  export function graduationFor(name, year) {
+   function graduationFor(name, year) {
     return `Congratulations ${name}!\nClass of ${year}`
   }
   /**
@@ -44,7 +44,7 @@ export function buildSign(occasion, name) {
    *
    * @returns {string} cost to create the sign
    */
-  export function costOf(sign, currency) {
+   function costOf(sign, currency) {
     let price = 20
     price += sign.length * 2 
     return `Your sign costs ${price}.00 ${currency}.`
